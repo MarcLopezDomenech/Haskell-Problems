@@ -8,7 +8,7 @@ myReverse :: [Int] ->[Int]
 myReverse list= foldl (\xs x->x:xs) [] list
 
 countIn :: [[Int]] -> Int -> [Int]
-countIn list n = map (\xs ->length(filter (==) n)) list
+countIn list n = map (\xs ->length(filter (== n) xs)) list
 
 firstWord :: String -> String
 firstWord text = takeWhile (/= ' ') (dropWhile (== ' ') text)
